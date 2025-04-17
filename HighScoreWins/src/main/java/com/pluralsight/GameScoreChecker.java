@@ -6,26 +6,35 @@ public class GameScoreChecker {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
 
-        // Prompt Enter the game score
-        System.out.println("Enter the game score in the format Home|Visitor 21:9");
+        // Prompt user
+        System.out.print("Please enter a game score: ");
+        String input = scanner.nextLine(); // Example: Home:Visitor|21:9
 
-        // Read prompt
-        String input = scanner.nextLine();
+        // Split on the pipe '|'
+        String[] mainParts = input.split("\\|");
+        if (mainParts.length != 2) {
+            System.out.println("Invalid input format.");
+            return;
+        }
 
-        // Split input into team names and scores
-        String[] parts = input.split("|");
-        String[] teams = parts[0].split(":");
-        String[] scores = parts[1].split(":");
+        // Split the first part to get team names
+        String[] teams = mainParts[0].split(":");
+        // Split the second part to get the scores
+        String[] scores = mainParts[1].split(":");
 
-        // Extract team names
+        if (teams.length != 2 || scores.length != 2) {
+            System.out.println("Invalid input format.");
+            return;
+        }
+
+        // Assign names and parse scores
         String homeTeam = teams[0];
         String visitorTeam = teams[1];
 
-        // Convert scores to integers
         int homeScore = Integer.parseInt(scores[0]);
         int visitorScore = Integer.parseInt(scores[1]);
 
-        // Determine and display the winner
+        // Determine winner
         if (homeScore > visitorScore) {
             System.out.println("Winner: " + homeTeam);
         } else if (visitorScore > homeScore) {
