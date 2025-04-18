@@ -16,8 +16,17 @@ public class Main {
         System.out.println("What is the person's profession: ");
         String profession = scanner.nextLine();
 
-        System.out.printf("Person %s is a %s and is %d years old.", fullname, profession, age);
+        displayPerson(fullname, age, profession);
+        savePerson(fullname, age, profession);
 
+    }
+
+    public static void displayPerson(String fullname, int age, String profession){
+        System.out.printf("Person %s is a %s and is %d years old.", fullname, profession, age);
+    }
+
+    public static void savePerson(String fullname, int age, String profession){
+        // do the work of saving a person to a database
 
     }
 }
