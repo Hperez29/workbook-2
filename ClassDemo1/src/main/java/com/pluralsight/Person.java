@@ -13,5 +13,28 @@ public class Person {
 
     }
 
+    public String getFullname(){
+        return this.fullname;
+    }
 
+    public void setFullname(String fullname){
+        this.fullname = fullname;
+
+    }
+
+    public int getAge(){
+        return this.age;
+    }
+
+    public void setAge(int age){
+        this.age = age;
+    }
+
+    public String getProfession(){
+        return this.profession;
+    }
+    public void setProfession(String profession){
+        this.profession = profession;
+    }
 }
+
