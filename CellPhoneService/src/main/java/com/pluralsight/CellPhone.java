@@ -16,7 +16,6 @@ public class CellPhone {
         this.phoneNumber = "";
         this.owner = "";
     }
-
     // Getter and Setter for serialNumber
     public int getSerialNumber() {
         return serialNumber;
@@ -63,6 +62,17 @@ public class CellPhone {
 
     }
 
+    // Method to display the details of the CellPhone object
+    public String toString() {
+        return String.format("Serial Number: %d\nModel: %s\nCarrier: %s\nPhone Number: %s\nOwner: %s",
+                serialNumber, model, carrier, phoneNumber, owner);
+    }
+
+    // Method to simulate dialing another phone
+    public void dial(String phoneNumber) {
+        System.out.println(owner + "'s phone is calling " + phoneNumber);
+    }
 }
+
 
 
