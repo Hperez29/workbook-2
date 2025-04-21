@@ -88,7 +88,4 @@ public class Main {
                     System.out.println("Invalid command. Please choose 1-6.");
             }
         }
-
-        scanner.close();
-    }
-}
+    }}

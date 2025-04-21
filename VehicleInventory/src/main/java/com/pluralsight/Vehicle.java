@@ -15,8 +15,24 @@ public class Vehicle {
         this.price = price;
     }
 
+    public long getVehicleId() {
+        return vehicleId;
+    }
+
     public String getMakeModel() {
         return makeModel;
+    }
+
+    public String getColor() {
+        return color;
+    }
+
+    public int getOdometerReading() {
+        return odometerReading;
+    }
+
+    public float getPrice() {
+        return price;
     }
 
     public void display() {
