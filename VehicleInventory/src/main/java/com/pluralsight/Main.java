@@ -59,7 +59,6 @@ public class Main {
                         System.out.print("Enter vehicle ID: ");
                         long id = scanner.nextLong();
                         scanner.nextLine(); // consume newline
-
                         System.out.print("Enter make/model: ");
                         String makeModel = scanner.nextLine();
 
